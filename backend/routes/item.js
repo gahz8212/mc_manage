@@ -66,6 +66,10 @@ router.post("/editItem", async (req, res) => {
   }
 });
 router.post("/excelAdd", async (req, res) => {
-  console.log("req.body", req.body);
+  const items = req.body;
+  if (items) {
+    console.log(items.length);
+  }
+  // items.map((item) => console.log(item.category));
 });
 module.exports = router;

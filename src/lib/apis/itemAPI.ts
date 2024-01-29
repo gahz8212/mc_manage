@@ -29,7 +29,7 @@ export const excelAddItem = (
       }[]
     | null
 ) => {
-  console.log("excelInput");
+  console.log(items);
   return client.post("/item/excelAdd", items);
 };
 export const getItems = () => {

@@ -42,8 +42,9 @@ const InputContainer = () => {
         const sheetname = workbook.SheetNames[0];
         const worksheets = workbook.Sheets[sheetname]
         const excelData = XLSX.utils.sheet_to_json(worksheets)
-        console.log(excelData)
+
         dispatch(ExcelAction.onSubmit(excelData))
+      
         // dispatch(ExcelAction.initForm())
     }
     const closeForm = () => {
@@ -56,10 +57,9 @@ const InputContainer = () => {
             dispatch(ItemActions.addedItemInsert(newItem))
         }
     }, [dispatch, status])
-    useEffect(() => {
-        dispatch(ItemActions.excelAddItem(datas))
-        console.log(datas)
-    }, [datas, dispatch])
+
+
+
     return (
 
         <InputComponent datas={datas} excel_onChange={excel_onChange} excel_onSubmit={excel_onSubmit} file={file} addImages={addImages} onChange={onChange} images={images} onSubmit={onSubmit} closeForm={closeForm} />

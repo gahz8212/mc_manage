@@ -1,0 +1,52 @@
+.form {
+  padding: 0 15px 5px;
+  background: lightblue;
+  border-radius: 10px;
+  transition: 0.5s;
+  &.edit {
+    background: lightcoral;
+  }
+  &.회로 {
+    background: lightgreen;
+  }
+  &.전장 {
+    background: cornflowerblue;
+  }
+  &.기구 {
+    background: darkcyan;
+  }
+  &.포장 {
+    background: peru;
+  }
+  &.기타 {
+    background: burlywood;
+  }
+}
+.title {
+  text-align: center;
+}
+textarea {
+  resize: none;
+}
+input[name="file"] {
+  display: none;
+}
+.imageList {
+  // max-height: 120px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  img {
+    object-fit: cover;
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  label {
+    height: 22px;
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,66 @@
+.item-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: 3rem auto;
+  @media (max-width: 900px) {
+    width: 90%;
+  }
+  .items {
+    margin: 0.8rem;
+    width: 100px;
+    height: 110px;
+    perspective: 200px;
+    position: relative;
+    transform: skewX(-14deg);
+    cursor: pointer;
+    &:hover .item.text {
+      transform: rotateY(-180deg);
+    }
+    &:hover .item.image {
+      transform: rotateY(0deg) scale(1.4);
+    }
+
+    .item {
+      border-radius: 10px;
+      transition: 1s;
+      backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 0.3rem;
+      &.text {
+        background-color: gray;
+        border: 3px solid black;
+        &.회로 {
+          background: lightgreen;
+        }
+        &.전장 {
+          background: cornflowerblue;
+        }
+        &.기구 {
+          background: darkcyan;
+        }
+        &.포장 {
+          background: peru;
+        }
+        &.기타 {
+          background: burlywood;
+        }
+      }
+      &.image {
+        transform: rotateY(180deg);
+        border: 3px solid black;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          padding: 20px;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
